@@ -20,7 +20,7 @@
 <img src="20200118-105947.GIF" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+Again, I have a slow computer, so I spent a lot of time waiting. A big problem was that the walkthrough told me to contact the Configurations API on MovieDatabase's site to get picture widths, but did not explain how. I spent several hours trying different ways of doing so, and after fitting in all my logic could not figure out how to parse the JSON I stored in my file, using the libraries provided.
 
 ### Open-source libraries used
 
