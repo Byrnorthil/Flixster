@@ -10,6 +10,7 @@ import android.util.Log;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.talegate.flixster.adapters.MovieAdapter;
+import com.talegate.flixster.clients.MovieDBClient;
 import com.talegate.flixster.models.Movie;
 
 import org.json.JSONArray;
@@ -23,7 +24,6 @@ import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     public static final String TAG = "MainActivity";
 
     List<Movie> movies;
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         rvMovies.setAdapter(adapter);
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
 
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get(NOW_PLAYING_URL, new JsonHttpResponseHandler() {
+        MovieDBClient client = new MovieDBClient();
+        client.getNowPlaying(new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 JSONObject jsonObject = json.jsonObject;
