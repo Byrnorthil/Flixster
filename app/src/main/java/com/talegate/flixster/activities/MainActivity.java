@@ -1,4 +1,4 @@
-package com.talegate.flixster;
+package com.talegate.flixster.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+import com.talegate.flixster.R;
 import com.talegate.flixster.adapters.MovieAdapter;
 import com.talegate.flixster.clients.MovieDBClient;
 import com.talegate.flixster.models.Movie;
